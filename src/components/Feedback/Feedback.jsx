@@ -3,7 +3,7 @@ import { Section } from './Section';
 import { Statistics } from './Statistics';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Notification } from './Notification';
-
+import css from './Feedback.module.css';
 export class Feedback extends Component {
   state = {
     good: 0,
@@ -19,7 +19,7 @@ export class Feedback extends Component {
 
   countPositiveFeedbackPercentage = () => {
     const { good, neutral, bad } = this.state;
-    return (good * 100) / (good + neutral + bad);
+    return Math.round((good * 100) / (good + neutral + bad));
   };
 
   handelBtn = event => {
@@ -37,7 +37,7 @@ export class Feedback extends Component {
     const positive = this.countPositiveFeedbackPercentage();
 
     return (
-      <>
+      <div className={css.feedback}>
         <Section title="Please leave feadack">
           <FeedbackOptions
             options={this.state}
@@ -81,7 +81,7 @@ export class Feedback extends Component {
                 <p>Bad: <span>{ bad }</span></p>
                 <p>Total: <span>{total}</span></p>
                 <p>Positive feedback: <span>{positive}%</span></p>        */}
-      </>
+      </div>
     );
   }
 }

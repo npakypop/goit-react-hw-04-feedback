@@ -1,0 +1,28 @@
+
+ul{
+    list-style: none;
+}
+
+span{
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+button{
+    cursor:pointer;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.319);
+}
+button:hover,
+button:focus {
+    background-color: rgba(0, 0, 0, 0.319);
+    
+}
+
+.feedback {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    padding: 40px 25px;
+}
