@@ -40,7 +40,7 @@ export class Feedback extends Component {
       <div className={css.feedback}>
         <Section title="Please leave feadack">
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.handelBtn}
           />
         </Section>

@@ -1,8 +1,19 @@
+import PropTypes from 'prop-types';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
-      {/* <h1>Please leave feadack</h1> */}
       <ul>
+        {options.map(option => (
+          <li key={option}>
+            <button type="button" name={option} onClick={onLeaveFeedback}>
+              {option}
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      {/* <h1>Please leave feadack</h1> */}
+      {/* <ul>
         <li>
           <button type="button" name="good" onClick={onLeaveFeedback}>
             Good
@@ -18,7 +29,14 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             Bad
           </button>
         </li>
-      </ul>
+      </ul> */}
     </>
   );
 };
+
+// FeedbackOptions.propTypes = {
+//   onLeaveFeedback: PropTypes.any,
+//   options: PropTypes.arrayOf({
+//     option: PropTypes.string,
+//   }),
+// };
