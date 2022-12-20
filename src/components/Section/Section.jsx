@@ -9,6 +9,6 @@ export const Section = ({ title, children }) => {
 };
 
 Section.propTypes = {
-  children: PropTypes.any,
   title: PropTypes.string,
+  children: PropTypes.element,
 };
